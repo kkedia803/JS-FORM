@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <link rel="stylesheet" href="main.css">
+    <!-- <script src="main.js"></script> -->
+
+</head>
+<body>
+    <script>
+        function validateForm() {
+            let x = document.forms["myForm"]["myName"].value;
+            let y = document.forms["myForm"]["myAge"].value;
+            let z = document.forms["myForm"]["myMail"].value;
+            let a = document.forms["myForm"]["myNum"].value;
+
+            if (x == "" || y == "" || z == "" || a == "") {
+                alert("FORM IS INCOMPLETE!!");
+                return false;
+            }
+            else{
+                alert("WELCOME!!");
+            }
+        }
+    </script>
+    <form name="myForm" onsubmit= "return validateForm()">
+        NAME<input type="text" name="myName" autocomplete="off" placeholder="Enter your name"  class="in" id="text">
+        DATE OF BIRTH <input type="date" name="myAge" class="in" id=""date>
+        EMAIL <input type="email" name="myMail" placeholder="Enter your e-mail id" class="in" id="mail" >
+        MOBILE NUMBER <input type="number" name="myNum" class="in" placeholder="Enter your contact number" id="no">
+        <input type="submit" value="Submit" id="sub" class="sub">
+    </form>
+</body>
+</html>
